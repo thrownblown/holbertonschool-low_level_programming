@@ -2,11 +2,11 @@
 
 /**
  * main - Entry point
- * uses puts to print a multiligual puzze
+ *
  * Return: Always 0 (Success)
  */
 int main(void)
 {
-    puts("\"Programming is like building a multilingual puzzle");
+    printf("Hello, World!");
     return (0);
 }
