@@ -1,5 +1,4 @@
-#include <errno.h>
-
+#include <unistd.h>
 /**
  * main - Entry point
  * uses printf to make text appear
@@ -7,6 +6,6 @@
  */
 int main(void)
 {
-	perror("and that piece of art is useful\" - Dora Korpar, 2015-10-19");
+	write(2, "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n", 61);
 	return (1);
 }
