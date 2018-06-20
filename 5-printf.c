@@ -2,7 +2,7 @@
 
 /**
  * main - Entry point
- * uses printf to make text appear 
+ * uses printf to make text appear
  * Return: Always 0 (Success)
  */
 int main(void)
