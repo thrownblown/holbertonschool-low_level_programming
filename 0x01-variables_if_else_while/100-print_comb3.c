@@ -14,7 +14,7 @@ int main(void)
 	{
 		while (m < 58)
 		{
-			if (i != m) 
+			if (i != m)
 			{
 				putchar(i);
 				putchar(m);
