@@ -1,19 +1,22 @@
 #include <stdio.h>
 
 /**
- * main - Entry point
- *  prints the sizes of various data types
+ * main -  putchars the hex numbers below 16
  * Return: Always 0 (Success)
  */
 int main(void)
 
 {
-	int a = 2;
-	int b = 1;
+	char i = '0';
 
+	while (i <= '9')
+	putchar(i++);
 
-	a = 0;
-	while (a < b)
-		printf("%d\n", a++);
+	i = 'a';
+
+	while (i <= 'f')
+	putchar(i++);
+
+	putchar('\n');
 	return (0);
 }
