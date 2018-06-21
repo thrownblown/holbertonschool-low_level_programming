@@ -2,18 +2,16 @@
 
 /**
  * main - Entry point
- *  prints the sizes of various data types
+ *  prints the lowercase alphabet using a loop
  * Return: Always 0 (Success)
  */
 int main(void)
 
 {
-	int a = 2;
-	int b = 1;
+	char i = 'z';
 
-
-	a = 0;
-	while (a < b)
-		printf("%d\n", a++);
+	while (i >= 'a')
+	putchar(i--);
+	putchar('\n');
 	return (0);
 }
