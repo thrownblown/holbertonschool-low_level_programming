@@ -1,19 +1,20 @@
 #include <stdio.h>
 
 /**
- * main - Entry point
- *  prints the sizes of various data types
+ * main -  prints the lowercase alphabet 'cept e & q using a loop
  * Return: Always 0 (Success)
  */
 int main(void)
 
 {
-	int a = 2;
-	int b = 1;
+	char i = 'a';
 
-
-	a = 0;
-	while (a < b)
-		printf("%d\n", a++);
+	while (i <= 'z')
+	{
+		if (i != 'e' && i != 'q')
+		putchar(i);
+		i++;
+	}
+	putchar('\n');
 	return (0);
 }
