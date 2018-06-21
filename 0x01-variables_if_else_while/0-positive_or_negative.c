@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 /* more headers goes there */
-
+#include <stdio.h>
 /**
  * main - prints n and if it is a posi, a neg or zero to the term
  * Return: Zero
@@ -16,14 +16,14 @@ int main(void)
 
 	if (n == 0)
 	{
-		printf("%i is zero", n)
+		printf("%i is zero", n);
 	}
 	else if (n > 0)
 	{
-		printf("%i is positive", n)
+		printf("%i is positive", n);
 	} else
 	{
-		printf("%i is negative", n)
+		printf("%i is negative", n);
 	}
 	return (0);
 }
