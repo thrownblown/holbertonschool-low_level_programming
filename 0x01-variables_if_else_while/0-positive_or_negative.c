@@ -1,19 +1,29 @@
-#include <stdio.h>
+
+#include <stdlib.h>
+#include <time.h>
+/* more headers goes there */
 
 /**
- * main - Entry point
- *  prints the sizes of various data types
- * Return: Always 0 (Success)
+ * main - prints n and if it is a posi, a neg or zero to the term
+ * Return: Zero
  */
 int main(void)
-
 {
-	int a = 2;
-	int b = 1;
+	int n;
 
+	srand(time(0));
+	n = rand() - RAND_MAX / 2;
 
-	a = 0;
-	while (a < b)
-		printf("%d\n", a++);
+	if (n == 0)
+	{
+		printf("%i is zero", n)
+	}
+	else if (n > 0)
+	{
+		printf("%i is positive", n)
+	} else
+	{
+		printf("%i is negative", n)
+	}
 	return (0);
 }
