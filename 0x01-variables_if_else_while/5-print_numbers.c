@@ -1,19 +1,17 @@
 #include <stdio.h>
 
 /**
- * main - Entry point
- *  prints the sizes of various data types
+ * main - prints the numbers 0 and above and below 10
  * Return: Always 0 (Success)
  */
 int main(void)
 
 {
-	int a = 2;
-	int b = 1;
+	int i = 0;
 
+	while (i < 10)
+	putchar(i++);
 
-	a = 0;
-	while (a < b)
-		printf("%d\n", a++);
+	putchar('\n');
 	return (0);
 }
