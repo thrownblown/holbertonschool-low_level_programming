@@ -1,18 +1,18 @@
 #include <stdio.h>
 
 /**
- * main -  prints the lowercase alphabet 'cept e & q using a loop
+ * main -  prints the lowercase then the uppercase alphabet
  * Return: Always 0 (Success)
  */
 int main(void)
 
 {
-	char i = 'a';
+	int i = 0;
+	char letters[53] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLYMNOPQRSTUVWXYZ";
 
-	while (i <= 'z')
+	while (i < 53)
 	{
-		if (i != 'e' && i != 'q')
-		putchar(i);
+		putchar(letters[i]);
 		i++;
 	}
 	putchar('\n');
