@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include "6-abs.c"
 
 /**
  * print_last_digit - prints and returns the last digit of a supplied val.
@@ -14,7 +15,7 @@ int print_last_digit(int n)
 	r = n  % 10;
 	if (r < 0)
 	{
-		r = r * -1;
+		r = _abs(r);
 	}
 	_putchar('0' + r);
 	return (r);
