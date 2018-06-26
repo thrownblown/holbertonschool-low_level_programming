@@ -8,6 +8,8 @@
 int main(void)
 {
 	char *s = "Holberton\n";
-	while (*s) _putchar(*s++);
+
+	while (*s)
+		_putchar(*s++);
 	return (0);
 }
