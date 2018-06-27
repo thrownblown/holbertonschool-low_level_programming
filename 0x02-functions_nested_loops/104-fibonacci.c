@@ -1,4 +1,6 @@
 #include <stdio.h>
+#define MAX 8000000000000000000
+
 /**
  * main - prints the sum of all the multiples of 3 or 5 below 1024.
  *
@@ -25,7 +27,7 @@ int main(void)
 			j = i;
 			continue;
 		}
-		else if ((f + s) < 8000000000000000000)
+		else if ((f + s) < MAX)
 		{
 			j = f + s;
 			f = s;
