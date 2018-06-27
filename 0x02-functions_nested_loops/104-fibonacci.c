@@ -20,7 +20,7 @@ int main(void)
 	unsigned long int s1;
 	unsigned long int s2;
 
-	while (i++ < 98)
+	while (i++ <= 98)
 	{
 		if (i == 1)
 		{
@@ -50,7 +50,7 @@ int main(void)
 			s2 = j2;
 			printf("%li%li", j1, j2);
 		}
-		if (i < 98)
+		if (i <= 98)
 			printf(", ");
 	}
 	printf("\n");
