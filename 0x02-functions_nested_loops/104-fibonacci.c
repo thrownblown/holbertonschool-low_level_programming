@@ -25,7 +25,7 @@ int main(void)
 			j = i;
 			continue;
 		}
-		else if ((f + s) < 7540113804746346429)
+		else if ((f + s) < 8000000000000000000)
 		{
 			j = f + s;
 			f = s;
