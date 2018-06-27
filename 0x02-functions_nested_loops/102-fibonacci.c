@@ -12,7 +12,7 @@ int main(void)
 	unsigned long int f = 0;
 	unsigned long int s = 1;
 
-	while (i++ < 50)
+	while (i++ < 51)
 	{
 		if (i == 1)
 		{
@@ -26,7 +26,7 @@ int main(void)
 			s = j;
 		}
 		printf("%li", j);
-		if (i < 50)
+		if (i < 51)
 			printf(", ");
 	}
 	printf("\n");
