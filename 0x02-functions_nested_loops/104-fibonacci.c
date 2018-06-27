@@ -1,6 +1,6 @@
 #include <stdio.h>
 #define MAX 8000000000000000000
-
+#define MOD 1000000000
 /**
  * main - prints the sum of all the multiples of 3 or 5 below 1024.
  *
@@ -34,15 +34,15 @@ int main(void)
 			s = j;
 
 			printf("%li", j);
-			f1 = f / 1000000000;
-			f2 = f % 1000000000;
-			s1 = s / 1000000000;
-			s2 = s % 1000000000;
+			f1 = f / MOD;
+			f2 = f % MOD;
+			s1 = s / MOD;
+			s2 = s % MOD;
 		}
 		else
 		{
-			j1 = f1 + s1 + (f2 + s2) / 1000000000;
-			j2 = (f2 + s2) % 1000000000;
+			j1 = f1 + s1 + (f2 + s2) / MOD;
+			j2 = (f2 + s2) % MOD;
 
 			f1 = s1;
 			f2 = s2;
