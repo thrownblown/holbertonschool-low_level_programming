@@ -1,10 +1,12 @@
 #include "holberton.h"
+
 /**
  * _strlen - calcs the len of a str
  * @s: pointer to the string to calc
  *
  * Return: the length of the str
  */
+
 int _strlen(char *s)
 {
 	int i;
@@ -21,15 +23,14 @@ int _strlen(char *s)
  *
  * Return: void just prints
  */
+
 void print_rev(char *s)
 {
 	int i;
-
-	i = _strlen(s);
-	while (i >= 0)
-	{
+	int j;
+	
+	j = _strlen(s);
+	for (i = j; i >= 0; i--)
 		_putchar(s[i]);
-		i--;
-	}
 	_putchar('\n');
 }
