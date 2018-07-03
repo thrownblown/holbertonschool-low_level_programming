@@ -2,9 +2,9 @@
 #include <stdio.h>
 
 /**
- * print_array - prints a specified number of character from an array
- * @a: array to print
- * @n: number of characters to print
+ * _strcpy - copies a string to anther memory adress
+ * @src: pointer to the source string
+ * @dest: pointer to the dest address
  *
  * Return: void just prints
  */
