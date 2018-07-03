@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include "2-strlen.c"
 /**
  * puts_half - prints 2nd half of a string to the terminal
  * @str: string to print
@@ -11,8 +10,12 @@ void puts_half(char *str)
 	int i, len;
 
 
-	len = _strlen(str);
-	if (len % 2 == 0)
+	//len = _strlen(str);
+	len = 0;
+	while (str[len] != '\0')
+		len++;
+
+	if (len % 2 != 0)
 	{
 		i = (len - 1) / 2;
 	}
