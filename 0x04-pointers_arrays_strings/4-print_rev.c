@@ -1,5 +1,21 @@
 #include "holberton.h"
-#include "2-strlen.c"
+
+/**
+ * _strlen - calcs the len of a str
+ * @s: pointer to the string to calc
+ *
+ * Return: the length of the str
+ */
+int _strlen(char *s)
+{
+	int i;
+
+	i = 0;
+	while (s[i] != '\0')
+		i++;
+	return (i);
+}
+
 /**
  * print_rev - prints a string to the terminal, backwards!
  * @s: string to print
