@@ -18,12 +18,14 @@ int _atoi(char *s)
 			posi *= -1;
 		if (s[i] >= '0' && s[i] <= '9')
 		{
-			n = s[i] - '0' + n * 10;
-			if (s[i] < '0' || s[i] > '9' || s[i] == '\0')
+			if (posi == 1)
+				n = s[i] - '0' + n * 10;
+			else
+				n = s[i] - '0' - n * 10;
+			if (s[i + 1] < '0' || s[i + 1] > '9' || s[i + 1] == '\0')
 				break;
 		}
 		i++;
 	}
-	return (n * posi);
+	return (n);
 }
-
