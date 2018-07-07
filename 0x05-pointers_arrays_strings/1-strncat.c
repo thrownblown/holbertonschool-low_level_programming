@@ -1,8 +1,9 @@
 #include "holberton.h"
 /**
- * _strcat - cat two strings towgether.
+ * _strncat - cat n chars of two strings towgether.
  * @dest: target for appemdment
  * @src: source string to be appended
+ * @n: number of chars to cat
  *
  * Return: pointer to the dest
  */
