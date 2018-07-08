@@ -34,5 +34,8 @@ void print_number(int n)
 		n %= max;
 		max /= 10;
 	}
-	_putchar('0' + n);
+	if (n < 0)
+		_putchar('0' - n);
+	else
+		_putchar('0' + n);
 }
