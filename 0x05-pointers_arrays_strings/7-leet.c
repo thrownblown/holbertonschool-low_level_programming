@@ -18,7 +18,7 @@ char *leet(char *s)
 	while (s[i] != '\0')
 	{
 		j = 0;
-		while (j < 9)
+		while (j <= 9)
 		{
 			if (s[i] == let[j])
 				s[i] = num[j];
