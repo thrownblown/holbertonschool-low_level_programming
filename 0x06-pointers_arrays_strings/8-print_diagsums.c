@@ -2,8 +2,9 @@
 #include <stdio.h>
 
 /**
- * print_chessboard - prints the chessboard.
- * @a: matrix repping the board
+ * print_diagsums - prints the sum of the two diags of a sq matrix of integers
+ * @a: matrix to be summed p
+ * @size: how big it be
  *
  * Return: void
  */
