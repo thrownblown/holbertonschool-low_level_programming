@@ -1,9 +1,10 @@
 #include "holberton.h"
 /**
- * factorial - adds up till gone
- * @n: number to add
+ * _pow_recursion - recursive cacluations exponentialness
+ * @x: our value
+ * @y: our exponent
  *
- * Return: the value of the factorial of n
+ * Return: x^y
 */
 int _pow_recursion(int x, int y)
 {
