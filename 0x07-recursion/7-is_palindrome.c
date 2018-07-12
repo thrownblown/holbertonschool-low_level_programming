@@ -41,6 +41,7 @@ int string_len(char *s, int len)
 int is_palindrome(char *s)
 {
 	int end;
+
 	end = string_len(s, 0);
 	return (_curse(s, end - 1));
 }
