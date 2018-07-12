@@ -9,7 +9,7 @@
 
 int _curse(char *s, int end)
 {
-	if (end <= 1)
+	if (end < 1)
 		return (1);
 	if (s[0] != s[end])
 		return (0);
@@ -41,7 +41,6 @@ int string_len(char *s, int len)
 int is_palindrome(char *s)
 {
 	int end;
-
 	end = string_len(s, 0);
 	return (_curse(s, end - 1));
 }
