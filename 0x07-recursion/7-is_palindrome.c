@@ -1,17 +1,15 @@
 #include "holberton.h"
-#include <stdio.h>
 
 /**
- * _curse - test for prime or composition
- * @base: place to start
- * @prime: subject to be tested
+ * _curse - compares two chars in a str
+ * @s: string to compare
+ * @end: end of str
  *
- * Return: sqrt or -1
+ * Return: 1 if palindrome
  */
 
 int _curse(char *s, int end)
 {
-	printf("%c %c\n", s[0], s[end]);
 	if (end <= 1)
 		return (1);
 	if (s[0] != s[end])
@@ -20,10 +18,10 @@ int _curse(char *s, int end)
 }
 
 /**
- * is_prime_number - is this number divisable only by its self and one?
- * @n: num to test
+ * is_palindrome - makes sure the str is coming and going the same way
+ * @s: str to test
  *
- * Return: 1 if prime or 0
+ * Return: 1 if palin or 0
  */
 
 int is_palindrome(char *s)
@@ -32,10 +30,6 @@ int is_palindrome(char *s)
 
 	end = 0;
 	while (s[end] != '\0')
-	{
-		printf("%c", s[end]);
 		end++;
-	}
-	printf("\n");
 	return (_curse(s, end - 1));
 }
