@@ -31,6 +31,5 @@ char *_strstr(char *haystack, char *needle)
 			return (&haystack[i]);
 		i++;
 	}
-	printf("bingo\n");
 	return (0);
 }
