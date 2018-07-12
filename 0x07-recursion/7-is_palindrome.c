@@ -1,5 +1,4 @@
 #include "holberton.h"
-
 /**
  * _curse - compares two chars in a str
  * @s: string to compare
@@ -18,6 +17,21 @@ int _curse(char *s, int end)
 }
 
 /**
+ * string_len - cals the len of str
+ * @s: str to len
+ * @len: len of str
+ *
+ * Return: len of str
+ */
+
+int string_len(char *s, int len)
+{
+	if (s[len] == '\0')
+		return (len);
+	return (string_len(s, ++len));
+}
+
+/**
  * is_palindrome - makes sure the str is coming and going the same way
  * @s: str to test
  *
@@ -28,8 +42,6 @@ int is_palindrome(char *s)
 {
 	int end;
 
-	end = 0;
-	while (s[end] != '\0')
-		end++;
+	end = string_len(s, 0);
 	return (_curse(s, end - 1));
 }
