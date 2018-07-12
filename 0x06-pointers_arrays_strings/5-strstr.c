@@ -1,5 +1,4 @@
 #include "holberton.h"
-
 /**
  * _strstr -locates a substring
  * @haystack: string to search
@@ -22,7 +21,9 @@ char *_strstr(char *haystack, char *needle)
 		{
 			if (needle[j] == haystack[i + j])
 				match = 1;
-			else
+			if (j > 0 && i > 0 && match && needle[j - 1] != haystack[i + j - 1])
+				match = 0;
+			if (j > 1 && i > 1 && match && needle[j - 2] != haystack[i + j - 2])
 				match = 0;
 			j++;
 		}
@@ -30,5 +31,6 @@ char *_strstr(char *haystack, char *needle)
 			return (&haystack[i]);
 		i++;
 	}
+	printf("bingo\n");
 	return (0);
 }
