@@ -3,6 +3,7 @@
 /**
  * main - prints the num of args the terminal
  * @argc: count of command line
+ * @argv: unused
  *
  * Return: 0 success
  */
