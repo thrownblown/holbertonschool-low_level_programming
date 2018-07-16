@@ -19,10 +19,15 @@ int main(int argc, char *argv[])
 	if (argc != 2)
 	{
 		printf("Error\n");
-		return (0);
+		return (1);
 	}
 
 	total = atoi(argv[1]);
+	if (total < 0)
+	{
+		printf("0\n");
+		return (0);
+	}
 	retval += total / 25;
 	total = total % 25;
 	retval += total / 10;
