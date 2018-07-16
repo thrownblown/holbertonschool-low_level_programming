@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 
 /**
  * main - prints the sum of argv
@@ -17,11 +18,13 @@ int main(int argc, char *argv[])
 
 	for (i = 1; i < argc; i++)
 	{
-		j = atoi(argv[i]);
-		if (j == 0 && *argv[i] != '0')
+		for (j = 0; argv[i][j] != '\0'; j++)
 		{
-			printf("Error\n");
-			return (0);
+			if (!isdigit(argv[i][j]))
+			{
+				printf("Error\n");
+				return (0);
+			}
 		}
 		retval += atoi(argv[i]);
 	}
