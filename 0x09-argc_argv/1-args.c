@@ -3,12 +3,11 @@
 /**
  * main - prints the num of args the terminal
  * @argc: count of command line
- * @argv: the command line args
  *
  * Return: 0 success
  */
 
-int main(int argc, char *argv[])
+int main(int argc, char __attribute__((unused)) *argv[])
 {
 	if (argc)
 		printf("%i\n", argc - 1);
