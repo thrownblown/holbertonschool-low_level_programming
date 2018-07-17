@@ -2,7 +2,11 @@
 #include <stdlib.h>
 
 /**
+ * create_array - creates an array of chars, and inits with char.
+ * @size: length of array
+ * @c: val for init
  *
+ * Return: pointer to new array or null if err
  */
 
 char *create_array(unsigned int size, char c)
