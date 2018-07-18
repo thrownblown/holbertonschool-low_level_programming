@@ -71,10 +71,11 @@ char *argstostr(int argc, char **argv)
 	s = 0;
 	for (i = 1; i < argc; i++)
 	{
+		s++;
 		for (c = 0; argv[i][c] != '\0'; c++)
 			s++;
 	}
-	retval = malloc(s + 2);
+	retval = malloc(s + 1);
 
 	retval = argv[1];
 	for (i = 2; i < argc; i++)
