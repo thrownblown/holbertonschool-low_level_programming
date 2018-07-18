@@ -1,4 +1,4 @@
-#include <stdio.h>
+nclude <stdio.h>
 #include <stdlib.h>
 
 /**
@@ -27,7 +27,7 @@ char *str_concat(char *s1, char *s2)
 	while (s2[j] != '\0')
 		j++;
 
-	ar = malloc(i + j);
+	ar = malloc(i + j + 1);
 	if (ar == NULL)
 		return (NULL);
 
