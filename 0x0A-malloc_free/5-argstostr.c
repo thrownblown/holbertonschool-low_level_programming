@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 #include "holberton.h"
 
 /**
@@ -63,7 +62,7 @@ char *str_concat(char *s1, char *s2)
 
 char *argstostr(int argc, char **argv)
 {
-	int i, s;
+	int i, s, c;
 	char *retval;
 
 	if (argc == 0)
@@ -72,7 +71,8 @@ char *argstostr(int argc, char **argv)
 	s = 0;
 	for (i = 1; i < argc; i++)
 	{
-		s += strlen(argv[i] + 1);
+		for (c = 0; argv[i][c] != '\0'; c++)
+			s++;
 	}
 	retval = malloc(s + 1);
 
