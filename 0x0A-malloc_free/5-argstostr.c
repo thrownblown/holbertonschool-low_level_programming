@@ -76,7 +76,7 @@ char *argstostr(int argc, char **argv)
 	retval = malloc(s + 1);
 	if (!retval)
 		return (0);
-		
+
 	retval = argv[0];
 	for (i = 1; i < argc; i++)
 	{
