@@ -2,11 +2,11 @@
 #include <stdlib.h>
 
 /**
- * alloc_grid - allocate a grid
- * @width: 
- * @height:
+ * alloc_grid - allocate a grid in memeory
+ * @width: number of cols
+ * @height: number of rows
  *
- * Return: pointer to new str or 0 if err
+ * Return: pointer to matrix or 0 if err
  */
 int **alloc_grid(int width, int height)
 {
@@ -19,7 +19,7 @@ int **alloc_grid(int width, int height)
 	if (!ar)
 	{
 		free(ar);
-		return (0);
+		return (NULL);
 	}
 
 	for (r = 0; r < height; r++)
@@ -27,7 +27,7 @@ int **alloc_grid(int width, int height)
 		ar[r] = malloc(width * sizeof(int));
 		if (!ar[r])
 		{
-			while(r >= 0)
+			while (r >= 0)
 				free(ar[r--]);
 			free(ar);
 		}
