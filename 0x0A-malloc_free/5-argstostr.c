@@ -27,7 +27,7 @@ char *str_concat(char *s1, char *s2)
 	while (s2[j] != '\0')
 		j++;
 
-	ar = malloc(i + argc);
+	ar = malloc(i + j);
 	if (ar == NULL)
 		return (NULL);
 
@@ -73,7 +73,7 @@ char *argstostr(int argc, char **argv)
 		for (c = 0; argv[i][c] != '\0'; c++)
 			s++;
 	}
-	retval = malloc(s + argc + 1);
+	retval = malloc(s + argc);
 	if (!retval)
 		return (0);
 
