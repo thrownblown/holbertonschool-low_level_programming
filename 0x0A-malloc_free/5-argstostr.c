@@ -82,6 +82,6 @@ char *argstostr(int argc, char **argv)
 		retval = str_concat(retval, "\n");
 		retval = str_concat(retval, argv[i]);
 	}
-	
+
 	return (retval);
 }
