@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "holberton.h"
 
 /**
  * str_concat - concats 2 strs
@@ -69,16 +68,17 @@ char *argstostr(int argc, char **argv)
 		return (0);
 
 	s = 0;
-	for (i = 1; i < argc; i++)
+	for (i = 0; i < argc; i++)
 	{
-		s++;
 		for (c = 0; argv[i][c] != '\0'; c++)
 			s++;
 	}
 	retval = malloc(s + 1);
-
-	retval = argv[1];
-	for (i = 2; i < argc; i++)
+	if (!retval)
+		return (0);
+		
+	retval = argv[0];
+	for (i = 1; i < argc; i++)
 	{
 		retval = str_concat(retval, "\n");
 		retval = str_concat(retval, argv[i]);
