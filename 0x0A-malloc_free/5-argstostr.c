@@ -74,14 +74,15 @@ char *argstostr(int argc, char **argv)
 		for (c = 0; argv[i][c] != '\0'; c++)
 			s++;
 	}
-	retval = malloc(s + 1);
+	retval = malloc(s + 2);
 
 	retval = argv[1];
-	for (i = 2; i <= argc; i++)
+	for (i = 2; i < argc; i++)
 	{
 		retval = str_concat(retval, "\n");
 		retval = str_concat(retval, argv[i]);
 	}
+	retval = str_concat(retval, "\n");
 
 	return (retval);
 }
