@@ -23,8 +23,8 @@ char **strtow(char *str)
 		{
 			c++;
 			i++;
-			while  (str[i] == ' ')
-					i++;
+			while (str[i] == ' ')
+				i++;
 		}
 		else
 			i++;
@@ -57,7 +57,7 @@ char **strtow(char *str)
 		if (!arr[i])
 		{
 			free(arr[i]);
-			while(i)
+			while (i)
 				free(arr[--i]);
 			free(arr);
 			return (0);
@@ -67,7 +67,7 @@ char **strtow(char *str)
 		k = 0;
 		for (c = j - c; c < j; c++)
 		{
-				arr[i][k++] = str[c];
+			arr[i][k++] = str[c];
 		}
 		arr[i][k] = '\0';
 		i++;
