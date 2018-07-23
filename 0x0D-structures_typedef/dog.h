@@ -8,11 +8,10 @@
   * @age: int for age, human years
   */
 
-
-typedef struct dog
+struct dog
 {
 	char *name;
 	char *owner;
-	int age;
-}
+	float age;
+};
 #endif
