@@ -3,7 +3,7 @@
 /**
  * print_name - supplies a variable to a funtion
  * @name: var to give to print func
- * @f: print func 
+ * @f: print func
  *
  * Return: nope
  */
