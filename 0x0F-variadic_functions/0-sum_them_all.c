@@ -12,7 +12,7 @@ int sum_them_all(const unsigned int num, ...)
 {
 	va_list valist;
 	unsigned int i;
-	int sum = 0;
+	double sum = 0;
 
 	if (num == 0)
 		return (0);
