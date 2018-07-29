@@ -4,7 +4,7 @@
 
 /**
  * sum_them_all - adds up all the args
- * @n: number of args
+ * @num: number of args
  * Return: sum of args
  */
 
