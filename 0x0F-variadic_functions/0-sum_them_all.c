@@ -8,10 +8,11 @@
  * Return: sum of args
  */
 
-int sum_them_all(const unsigned int n, ...)
+int sum_them_all(const unsigned int num, ...)
 {
 	va_list valist;
-	int sum, i;
+	unsigned int i;
+	int sum = 0;
 
 	va_start(valist, num);
 	for (i = 0; i < num; i++)
