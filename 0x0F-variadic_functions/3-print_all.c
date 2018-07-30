@@ -64,36 +64,36 @@ void print_string(va_list valist)
 
 void print_all(const char * const format, ...)
 {
-    va_list valist;
-    unsigned int i;
+	va_list valist;
+	unsigned int i;
 
-    va_start(valist, format);
+	va_start(valist, format);
 
-    i = 0;
-    while (format && format[i])
-    {
-        switch(format[i])
-        {
-            case 'i':
-                print_int(valist);
-                break;
-            case 'f':
-                print_float(valist);
-                break;
-            case 'c':
-                print_char(valist);
-                break;
-            case 's':
-                print_string(valist);
-                break;
-        }
-        if(i)
-            printf(", ");
-        i++;
-    }
+	i = 0;
+	while (format && format[i])
+	{
+		switch (format[i])
+		{
+			case 'i':
+				print_int(valist);
+				break;
+			case 'f':
+				print_float(valist);
+				break;
+			case 'c':
+				print_char(valist);
+				break;
+			case 's':
+				print_string(valist);
+				break;
+		}
+		if (i)
+			printf(", ");
+		i++;
+	}
 
-    printf("\n");
+	printf("\n");
 
-    va_end(valist);
+	va_end(valist);
 
 }
