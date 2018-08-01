@@ -72,7 +72,8 @@ void print_all(const char * const format, ...)
 	i = 0;
 	while (format && format[i])
 	{
-		switch (format[i])
+		i++;
+		switch (format[i - 1])
 		{
 			case 'i':
 				print_int(valist);
@@ -86,11 +87,11 @@ void print_all(const char * const format, ...)
 			case 's':
 				print_string(valist);
 				break;
+			default:
+				continue;
 		}
-		
-		if (i && format[i + 1])
+		if (i - 1 && format[i])
 			printf(", ");
-		i++;
 	}
 
 	printf("\n");
