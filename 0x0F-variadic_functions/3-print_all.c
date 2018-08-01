@@ -87,7 +87,8 @@ void print_all(const char * const format, ...)
 				print_string(valist);
 				break;
 		}
-		if (i)
+		
+		if (i && format[i + 1])
 			printf(", ");
 		i++;
 	}
