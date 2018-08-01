@@ -90,7 +90,7 @@ void print_all(const char * const format, ...)
 			default:
 				continue;
 		}
-		if (i - 1 && format[i])
+		if (format[i])
 			printf(", ");
 	}
 
