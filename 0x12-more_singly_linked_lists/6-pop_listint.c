@@ -2,10 +2,10 @@
 #include <stdlib.h>
 
 /**
-* free_listint2 - clears a linked list from mem
+* pop_listint - removes a head from a linked list and returns stored int val
 * @head: ptr to head of linked list
 *
-* Return: nope void
+* Return: value stored in popped head node
 */
 
 int pop_listint(listint_t **head)
