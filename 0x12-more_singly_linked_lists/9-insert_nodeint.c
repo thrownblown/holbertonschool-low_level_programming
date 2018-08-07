@@ -20,6 +20,26 @@ listint_t *get_nodeint_at_index(listint_t *h, unsigned int index)
 	return (h);
 }
 
+/**
+ * add_nodeint - adds a new node at the beginning of a list_t list.
+ * @head: start of list
+ * @n: int to add
+ *
+ * Return: ptr to new head
+ */
+listint_t *add_nodeint(listint_t **head, const int n)
+{
+	listint_t *new;
+
+	new = malloc(sizeof(listint_t));
+	if (new == NULL)
+		return (NULL);
+	new->n = n;
+	new->next = *head;
+	*head = new;
+
+	return (new);
+}
 
 /**
  * insert_nodeint_at_index - adds a new node at the end of a list_t list.
@@ -36,6 +56,9 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 
 	if (!head)
 		return (NULL);
+	if (idx == 0)
+		return (add_nodeint(head, n));
+
 	new = malloc(sizeof(listint_t));
 	if (!new)
 		return (NULL);
@@ -47,7 +70,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		*head = new;
 		return (*head);
 	}
-	h = get_nodeint_at_index(*head, idx);
+	h = get_nodeint_at_index(*head, idx - 1);
 	new->next = h->next;
 	h->next = new;
 	return (new);
