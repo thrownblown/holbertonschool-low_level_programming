@@ -2,10 +2,11 @@
 #include <stdlib.h>
 
 /**
- * print_listint - prints all the elements of a list_t list.
+ * get_nodeint_at_index - node getter
  * @h: start of list
+ * @index: position of node to be gotten
  *
- * Return: length of list
+ * Return: list node
  */
 
 listint_t *get_nodeint_at_index(listint_t *h, unsigned int index)
