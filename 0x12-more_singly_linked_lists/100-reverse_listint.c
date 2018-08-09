@@ -2,10 +2,10 @@
 #include <stdlib.h>
 
 /**
-* free_listint2 - clears a linked list from mem
+* reverse_listint - reveses the order of a linked list
 * @head: ptr to head of linked list
 *
-* Return: nope void
+* Return: ptr to new first node
 */
 
 listint_t *reverse_listint(listint_t **head)
