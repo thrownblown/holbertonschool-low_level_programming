@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
-* clear_bit - sets bit at index to 0 
+* clear_bit - sets bit at index to 0
 * @n: num to be cleared of bit
 * @index: bit position to switch
 * Return: -1 if err else 1
