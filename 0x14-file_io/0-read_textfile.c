@@ -13,6 +13,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	int file;
 	char *tmp;
 	ssize_t inchars, outchars;
+
 	if (filename == NULL)
 		return (0);
 
@@ -33,6 +34,6 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	free(tmp);
 	close(file);
-	
+
 	return (outchars);
 }
