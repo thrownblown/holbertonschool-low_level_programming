@@ -9,7 +9,7 @@
  * Return: list node
  */
 
-listint_t *get_dnodeint_at_index(listint_t *h, unsigned int index)
+dlistint_t *get_dnodeint_at_index(dlistint_t *h, unsigned int index)
 {
 	size_t count;
 
