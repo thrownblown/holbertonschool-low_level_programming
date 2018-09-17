@@ -15,33 +15,9 @@ dlistint_t *get_dnodeint_at_index(dlistint_t *h, unsigned int index)
 {
 	size_t count;
 
-	for (count = 0; h != 0 && count < index; count++)
+	for (count = 0; h->next != 0 && count < index; count++)
 		h = h->next;
 	return (h);
-}
-
-/**
- * add_dnodeint - adds a new node at the beginning of a list_t list.
- * @head: start of list
- * @n: int to add
- *
- * Return: ptr to new head
- */
-dlistint_t *add_dnodeint(dlistint_t **head, const int n)
-{
-	dlistint_t *new;
-
-	new = malloc(sizeof(dlistint_t));
-	if (new == NULL)
-		return (NULL);
-	new->n = n;
-	new->next = *head;
-	new->prev = NULL;
-	if (*head)
-		(*head)->prev = new;
-	*head = new;
-
-	return (new);
 }
 
 /**
@@ -60,7 +36,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	if (!h)
 		return (NULL);
 	if (idx == 0)
-		return (add_dnodeint(head, n));
+		return (add_dnodeint(&head, n));
 
 	new = malloc(sizeof(dlistint_t));
 	if (!new)
@@ -74,11 +50,11 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		*h = new;
 		return (*h);
 	}
-	head = get_dnodeint_at_index(*head, idx - 1);
+	head = get_dnodeint_at_index(*h, idx - 1);
 	if (!head)
 		return (NULL);
 	new->next = head->next;
-	nev->prev = head;
+	new->prev = head;
 	head->next = new;
 	return (new);
 }
