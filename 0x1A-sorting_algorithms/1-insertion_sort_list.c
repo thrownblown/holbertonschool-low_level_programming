@@ -1,5 +1,9 @@
 #include "sort.h"
-
+/**
+ * insertion_sort_list - Runs a bubble sort on an array
+ * @list: pointer to the head of a dbl linked list
+ * Return: Nothing
+ */
 void insertion_sort_list(listint_t **list)
 {
 	listint_t *next, *tmp2, *tmp = *list;
@@ -19,7 +23,8 @@ void insertion_sort_list(listint_t **list)
 		{
 			tmp2 = tmp->prev;
 			tmp2->next = tmp->next;
-			tmp2->next->prev = tmp2;
+			if (tmp2->next)
+				tmp2->next->prev = tmp2;
 			tmp->prev = tmp->prev->prev;
 			tmp2->prev = tmp;
 			if (tmp->prev)

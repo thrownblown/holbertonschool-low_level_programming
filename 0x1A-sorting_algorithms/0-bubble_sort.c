@@ -1,12 +1,17 @@
 #include "sort.h"
-
+/**
+ * bubble_sort - Runs a bubble sort on an array
+ * @array: pointer to an array of ints
+ * @size: size of the array
+ * Return: Nothing
+ */
 void bubble_sort(int *array, size_t size)
 {
 	size_t i;
 	int tmp;
 	int swapped = 1;
 
-	while(swapped)
+	while (swapped)
 	{
 		swapped = 0;
 		for (i = 0; i < size - 1; i++)
