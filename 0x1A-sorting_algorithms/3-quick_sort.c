@@ -19,7 +19,7 @@ size_t partition(int *array, size_t lo, size_t hi, size_t size)
 
 		if (array[j] < pivot)
 		{
-			if (i != j)
+			if (i != j && array[i] != array[hi])
 			{
 				tmp = array[i];
 				array[i] = array[j];
@@ -29,10 +29,13 @@ size_t partition(int *array, size_t lo, size_t hi, size_t size)
 			i++;
 		}
 	}
-	tmp = array[i];
-	array[i] = array[hi];
-	array[hi] = tmp;
-	print_array(array, size);
+	if (array[i] != array[hi])
+	{
+		tmp = array[i];
+		array[i] = array[hi];
+		array[hi] = tmp;
+		print_array(array, size);
+	}
 	return (i);
 }
 
@@ -67,7 +70,6 @@ void quicksort(int *array, size_t lo, size_t hi, size_t size)
  */
 void quick_sort(int *array, size_t size)
 {
-	if (array && size &&
-		 size == sizeof(array) / sizeof(array[0]))
+	if (array && size)
 		quicksort(array, 0, size - 1, size);
 }
