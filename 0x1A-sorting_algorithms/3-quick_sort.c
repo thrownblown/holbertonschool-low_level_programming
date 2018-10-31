@@ -29,7 +29,7 @@ size_t partition(int *array, size_t lo, size_t hi, size_t size)
 			i++;
 		}
 	}
-	if (array[i] != array[hi])
+	if (array[j] == pivot && array[i] != pivot)
 	{
 		tmp = array[i];
 		array[i] = array[hi];
