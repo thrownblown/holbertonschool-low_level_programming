@@ -51,7 +51,7 @@ void quicksort(int *array, size_t lo, size_t hi, size_t size)
 
 	if (lo < hi)
 	{
-		pivot = partition(array, 0, hi, size);
+		pivot = partition(array, lo, hi, size);
 		if (pivot)
 			quicksort(array, lo, pivot - 1, size);
 		quicksort(array, pivot + 1, hi, size);
