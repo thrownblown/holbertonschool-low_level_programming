@@ -8,17 +8,16 @@ def island_perimeter(grid):
     pre = 0
     nxt = 0
     for i, row in enumerate(grid):
-        # import pdb; pdb.set_trace()
         rowsum = sum(row)
         try:
             nxt = sum(grid[i + 1])
         except IndexError:
             nxt = 0
-        if rowsum > pre:
-            perimeter += rowsum - pre + 2
-        elif rowsum < pre:
-            perimeter += rowsum - nxt + 2
-        else:
+        if rowsum > 0:
             perimeter += 2
+        if rowsum > pre:
+            perimeter += rowsum - pre
+        if rowsum > nxt:
+            perimeter += rowsum - nxt
         pre = rowsum
     return(perimeter)
