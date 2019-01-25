@@ -8,7 +8,7 @@
  * @size: len of arr
  * @value: int to be found
  *
- * Return: Always EXIT_SUCCESS
+ * Return: index of value or -1 if err
  */
 int linear_search(int *array, size_t size, int value)
 {

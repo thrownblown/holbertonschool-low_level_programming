@@ -49,7 +49,7 @@ int binary_search(int *array, size_t size, int value)
 	if (array[h] == value)
 		return (h);
 	if (h - 1 && array[h] > value)
-		return (binary_search(array, h, value));
+		return (binary_search(array, h - 1, value));
 	if (array[h] < value)
 	{
 		ret = binary_search(&array[h], size - h, value);
